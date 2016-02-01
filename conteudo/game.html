@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<meta http-equiv="cache-control" content="max-age=0" />
+	<meta http-equiv="expires" content="0" />
+	<meta name="author" content="Editora do Brasil" />
+	<meta name="copyright" content="© 2014 Editoradobrasil.com.br" />
+	<meta name="apple-mobile-web-app-title" content="Editora do Brasil">
+	<link rel="stylesheet" href="css/normalize.css" type="text/css">
+	<link rel="stylesheet" href="css/animate.css" type="text/css">
+	<link rel="stylesheet" href="css/template.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<title></title>
+</head>
+
+<body>
+<div id="loading"><img src="img/template/loader.gif" alt="Carregando">Carregando</div>
+<div id="init" class="container">
+	<div id="capa">
+		<div class="header">
+			<h1></h1>
+		</div>
+		<div class="subheader">
+			<span>-</span>	
+			<p></p>
+		</div>
+		<div class="acoes">
+			<div>Iniciar</div>
+			<div>créditos</div>
+		</div>
+		<div id="creditos">
+			<div class="barraLogo">
+				<img src="img/template/logo.png">
+			</div>
+			<h2>Projeto Jimboê</h2>
+			<div class="boxTextMask"></div>
+			<div class="boxText">
+				<div class="text-creditos">
+					<strong>Supervisão de arte, editoração e produção digital:</strong> Adelaide Carolina Cerutti<br>
+					<strong>Coordenação de produção digital:</strong> Daniel Cilli<br><br>
+
+					<strong>Design instrucional:</strong> Bruno Cardoso Silva e Mateus Carneiro Ribeiro Alves<br>
+					<strong>Web design:</strong> Thiago Hille e Tiago Lima<br>
+					<strong>Assistência de design digital:</strong> Emília Akemi<br>
+					<strong>Assistência de arte:</strong> Livia Danielli <br>
+					<strong>Revisão:</strong> Equipe Revisão <br>
+					<strong>Pesquisa iconográfica:</strong> Mariane Mota <br>
+					<strong>Imagens:</strong> Shutterstock<br>
+					<strong>Ilustrações:</strong> Tania Ricci<br>
+					<strong>Áudio:</strong> Stereobot e Soundsnap<br>
+					<strong>Narração:</strong> Carla Rebelo<br>
+					<strong>Controle de processos editoriais:</strong> Equipe CPE<br>
+				</div>
+			</div>
+			<div class="btnFechaCreditos">FECHAR</div>
+		</div>
+	</div>
+
+	<div id="content">
+	<div id="cobertura_mapa"></div>
+	<!-- Início do html aqui -->
+	
+	<!-- Balões de fala -->
+	<div class="bl balao1 falaIntroducao">
+		Olá! Meu nome é Diana e hoje faremos um passeio por Roma, a capital da Itália. Para visitar os principais pontos turísticos dessa cidade, é preciso resolver algumas questões. Para isso, conto com sua ajuda! Tenho certeza de que nossa aventura será bem interessante.
+	</div>
+	<div class="bl balao2 falaBasilicaSaoPedro">
+		Será que estamos atrasados para visitar a Basílica de São Pedro?<br />Que horas o relógio está marcando?
+	</div>
+	<div class="bl balao3 falaColiseu">
+		Você entrará no Coliseu pelo portão 63. Que numeração deverá estar sobre o portão correto?
+	</div>
+	<div class="bl balao4 falaMuseu">
+		O palácio que abriga a Galleria Borghese é uma construção de 1613. Em algarismos romanos, como seria representado<br>esse ano?
+	</div>
+	<div class="bl balao5 falaRua">
+		Que número aparece na placa que identifica a Praça de São Egídio?
+	</div>
+	<div class="bl balao6">
+		Obrigada pela ajuda. Espero que você tenha gostado desse pequeno passeio por Roma! Até a próxima!
+	</div>
+	<!-- Balões de feed -->
+	<div class="balaoAcerto">
+		Parabéns, você acertou! Vamos continuar nossa aventura pela cidade de Roma!
+	</div>
+	<div class="balaoAcertoFinal">
+		Parabéns, você acertou!
+	</div>
+	<div class="balaoErro">
+		Incorreto. Olhe atentamente a posição de cada algarismo romano e tente outra vez.
+	</div>
+	<div class="balaoGameOver">
+		Resposta incorreta. Relembre os valores dos algarismos romanos e tente outra vez.
+	</div>
+	<div id="instrutor_conclusao"></div>
+	<div class="instrutor"></div>
+	<div class="ovInst"></div>
+		
+	<div id="feedEscolha">
+		<p></p>
+		<div class="btnFechar">Fechar</div>
+	</div>
+	<div class="ovFeed"></div>
+	<div class="ovFeedMenu"></div>
+	<div class="areaClick1"></div>
+	<div class="areaClick2"></div>
+	<div class="areaClick3"></div>
+	<div class="areaClick4"></div>
+	<div class="map">
+		<div id="topo_mapa"></div>
+	</div>
+	
+	<div id="stage1" class="janela">
+		<h3>Basílica de São Pedro</h3>
+		<div class="imgStage1">
+			<div class="anima"></div>
+			<div class="img1"></div>
+		</div>
+		<ul class="menu">
+			<li class="certo">8:10</li>
+			<li class="errado" onclick="errar_stage_1();">2:40</li>
+			<li class="errado" onclick="errar_stage_1();">8:00</li>
+		</ul>
+	</div>
+	<div id="stage2" class="janela">
+		<h3>Coliseu</h3>
+		<div class="imgStage2"></div>
+		<ul class="menu">
+			<li class="certo">LXIII</li>
+			<li class="errado" onclick="errar_stage_2();">XLIII</li>
+			<li class="errado" onclick="errar_stage_2();">LIII</li>
+		</ul>
+	</div>
+	<div id="stage3" class="janela">
+		<h3>Praça</h3>
+		<div class="imgStage3"></div>
+		<ul class="menu">
+			<li class="errado" onclick="errar_stage_3();">103</li>
+			<li class="certo">13</li>
+			<li class="errado" onclick="errar_stage_3();">7</li>
+		</ul>
+	</div>
+	<div id="stage4" class="janela">
+		<h3>Museu</h3>
+		<div class="imgStage4"></div>
+		<ul class="menu">
+			<li class="errado" onclick="errar_stage_4();">MDCCXXXIII</li>
+			<li class="errado" onclick="errar_stage_4();">MCDLXIII</li>
+			<li class="certo" onclick="abrir_ponto_ativo_museu();">MDCXIII</li>
+		</ul>
+	</div>
+	
+	
+	<!-- Final do html -->
+	</div>
+</div>
+	<script>
+		function iniciar_oed_frame(){
+			iniciar_com_tap();
+		}	
+	</script>
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
+	<script type="text/javascript" src="js/jquery.ui.touch-punch.js"></script>
+	<script type="text/javascript" src="js/PxLoader.js"></script>
+	<script type="text/javascript" src="js/PxLoaderImage.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/howler.min.js"></script>
+	<script type="text/javascript" src="js/jquery.lettering.js"></script>
+	<script type="text/javascript" src="js/jquery.fittext.js"></script>
+	<script type="text/javascript" src="js/jquery.textillate.js"></script>
+	<script type="text/javascript" src="js/template.js"></script>
+	<script type="text/javascript" src="js/funcoes.js"></script>
+</body>	
+</html>
